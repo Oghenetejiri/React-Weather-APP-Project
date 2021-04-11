@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios"
+import './App.css';
 
 export default function Form() {
   const [parameters, setParameters] = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState({});
+  
 
   function displayWeather(response) {
     setLoaded(true);

@@ -6,7 +6,7 @@ export default function Programmer() {
         <a
           href="https://github.com/Oghenetejiri/my-weather-project"
           target="blank"
-          class="author"
+          className="author"
         >
           Open-source code
         </a>
