@@ -4,7 +4,7 @@ export default function Programmer() {
     <div className="Programmer">
       <small>
         <a
-          href="https://github.com/Oghenetejiri/my-weather-project"
+          href="https://github.com/Oghenetejiri/React-Weather-APP-Project"
           target="blank"
           className="author"
         >
