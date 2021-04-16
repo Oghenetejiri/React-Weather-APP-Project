@@ -1,6 +1,7 @@
 import Form from "./Form";
 import Programmer from "./Programmer";
 import Illustration from "./Illustration";
+import "bootstrap/dist/css/bootstrap.css";
 import './App.css';
 
 
