@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios"
+import Loader from "react-loader-spinner";
 import './App.css';
 
 export default function Form() {
@@ -76,6 +77,16 @@ export default function Form() {
       </div>
     );
   } else {
-    return form;
+    return (<div>
+      {form}
+    <Loader
+        type="Circles"
+        color="blue"
+        height={100}
+        width={100}
+        
+      />
+    </div>
+    );
   }
 }
