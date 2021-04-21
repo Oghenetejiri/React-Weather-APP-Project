@@ -3,8 +3,9 @@ import axios from "axios"
 import Loader from "react-loader-spinner";
 import './App.css';
 
+
 export default function Form() {
-  const [parameters, setParameters] = useState(null);
+ // const [parameters, setParameters] = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState({});
   
@@ -22,24 +23,24 @@ export default function Form() {
     });
   }
 
-  function displayParameters(event) {
-    event.preventDefault();
-    let apiKey = "a6480ded183f36ecfeb2f5aac6fafa9e";
-    let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-    let url = `${apiEndpoint}?q=${parameters}&appid=${apiKey}&units=metric`;
-    axios.get(url).then(displayWeather);
-  }
-  function updateParameters(event) {
-    setParameters(event.target.value);
-  }
+ //function displayParameters(event) {
+   // event.preventDefault();
+    
+  //}
+  //function updateParameters(event) {
+ //   setParameters(event.target.value);
+//  }
+
+  
+
   let form = (
-    <form className="Form" onSubmit={displayParameters}>
+    <form className="Form">
       <input
         className="CityForm"
         type="search"
         placeholder="Type a city"
         autoComplete="off"
-        onChange={updateParameters}
+      //  onChange={updateParameters}
       />
       <button className="SubmitForm" type="submit">
         {" "}
@@ -50,43 +51,53 @@ export default function Form() {
   if (loaded) {
     return (
       <div>
-        {form}
-        <ul>
-          <li>
-            <strong>Place:</strong> {weather.place}
-          </li>
-          <li>
-            <strong>Temperature:</strong> {weather.temperature}°C
-          </li>
-          <li>
-            <strong>Description:</strong> {weather.description}
-          </li>
-          <li>
-            <strong>Wind:</strong> {weather.wind} km/H
-          </li>
-          <li>
-            <strong>Feels Like:</strong> {weather.feelsLike}°C
-          </li>
-          <li>
-            <strong>Humidity:</strong> {weather.humidity} Km/H
-          </li>
-          <li>
-            <img src={weather.icon} alt="Weather Icon" />
-          </li>
-        </ul>
-      </div>
-    );
+        {form} 
+      <div className="row">
+               <div className="col-12">
+                    <strong>PLACE: {weather.place}</strong> 
+                </div>
+                <div className="col-12">
+                    <strong>TEMPERATURE: {weather.temperature}°C</strong> 
+                </div>
+                <div className="col-12">
+                    <strong>DESCRIPTION: {weather.description}</strong>
+                </div>
+                <div className="col-12">
+                    <strong>WINDSPEED: {weather.wind}km/h</strong> 
+                </div>
+                <div className="col-12">
+                    <strong>FEELS LIKE: {weather.feelsLike}°C</strong>
+                </div>
+                <div className="col-12">
+                    <strong>HUMIDITY: {weather.humidity}km/h</strong>
+                </div>
+                <div className="col-12">
+                    <strong> <img src={weather.icon} alt="Weather Icon" /></strong>
+                </div>
+                            
+                </div>
+      
+        
+    </div>);
   } else {
+  let apiKey = "a6480ded183f36ecfeb2f5aac6fafa9e";
+    let city ="Nigeria"
+    let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+    let url = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(url).then(displayWeather);
     return (<div>
+      
       {form}
-    <Loader
+    
+   <Loader
         type="Circles"
         color="blue"
         height={100}
         width={100}
-        
+        timeout={600000}
       />
+  
     </div>
     );
-  }
+}
 }

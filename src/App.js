@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import './App.css';
 
 
+
  function App() {
   return (
     <div className="App">
@@ -13,6 +14,8 @@ import './App.css';
           <div className="simple-weather-app">
             <div className="the-temperature">
               <Illustration />
+              
+
               <h3>
                 <strong className="actuality">-2</strong>
                 <span className="value">
@@ -25,6 +28,7 @@ import './App.css';
                 </span>
               </h3>
             </div>
+            
             <Form />
             </div>
           </div>
