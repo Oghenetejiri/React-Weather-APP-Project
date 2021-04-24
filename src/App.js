@@ -14,22 +14,9 @@ import './App.css';
           <div className="simple-weather-app">
             <div className="the-temperature">
               <Illustration />
-              
-
-              <h3>
-                <strong className="actuality">-2</strong>
-                <span className="value">
-                  <a href="/" className="in-action">
-                    °C
-                  </a>
-                </span>
-                <span className="value2">
-                  /<a href="/">°F</a>
-                </span>
-              </h3>
             </div>
-            
-            <Form />
+      
+            <Form defaultCity="Estonia"/>
             </div>
           </div>
           <Programmer />

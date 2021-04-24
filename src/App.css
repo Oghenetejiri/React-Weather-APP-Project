@@ -2,7 +2,6 @@ body {
   font-family: sans-serif;
 }
 h1,
-h3,
 h5 {
   text-align: center;
   color: blue;
@@ -53,7 +52,7 @@ button {
 }
 .wrapper {
   text-align: center;
-  max-width: 600px;
+  max-width: 500px;
   margin: 30px auto;
 }
 a {
@@ -79,8 +78,8 @@ span.value2 {
   color: black;
   cursor: default;
 }
-span {
-  text-transform: capitalize;
+.location {
+  font-size: 30px;
 }
 .Programmer {
   text-align: center;

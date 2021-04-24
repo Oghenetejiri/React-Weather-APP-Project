@@ -22,6 +22,6 @@ let days = [
 ];
 let day = days[props.date.getDay()];
     return <div>
-        {day} {hours} : {minutes}
+        {day} {hours}:{minutes}
     </div>
 }
