@@ -1,5 +1,7 @@
 import React from "react"
 import EngineeredDate from "./EngineereDate";
+import WeatherIcon from "./WeatherIcon"
+
 
 export default function WeatherData(props){
     return <div>
@@ -24,7 +26,7 @@ export default function WeatherData(props){
               </h3>
                 </div>
                 <div className="col-7">
-                    <div className="text-capitalize">Description: {props.data.datadescription}</div>
+                    <div className="text-capitalize">Description: {props.data.description}</div>
                 </div>
                 <div className="col-5">
                     <div>Windspeed: {props.wind} km/h</div> 
@@ -36,7 +38,8 @@ export default function WeatherData(props){
                     <div>Humidity: {props.data.humidity} km/h</div>
                 </div>
                 <div className="col-6">
-                    <div> <img src={props.data.icon} alt="Weather Icon" /></div>
+                  
+                    <div><WeatherIcon code={props.data.icon}/></div>
                 </div>
                             
                 </div>

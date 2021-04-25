@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios"
 import Loader from "react-loader-spinner";
 import './App.css';
-
+import Illustration from "./Illustration";
 import WeatherData from "./WeatherData";
 
 
@@ -21,7 +21,7 @@ export default function Form(props) {
       feelsLike: Math.round(response.data.main.feels_like),
       humidity: Math.round(response.data.main.humidity),
       place: response.data.name,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      icon: response.data.weather[0].icon
     });
   }
 
@@ -74,7 +74,7 @@ export default function Form(props) {
         width={100}
         timeout={600000}
       />
-  
+  <Illustration/>
     </div>
     );
 }

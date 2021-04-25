@@ -1,6 +1,5 @@
 import Form from "./Form";
 import Programmer from "./Programmer";
-import Illustration from "./Illustration";
 import "bootstrap/dist/css/bootstrap.css";
 import './App.css';
 
@@ -12,11 +11,7 @@ import './App.css';
       <div className="container">
         <div className="wrapper">
           <div className="simple-weather-app">
-            <div className="the-temperature">
-              <Illustration />
-            </div>
-      
-            <Form defaultCity="Estonia"/>
+            <Form defaultCity=""/>
             </div>
           </div>
           <Programmer />
