@@ -9,6 +9,7 @@ import WeatherData from "./WeatherData";
 export default function Form(props) {
   const [weather, setWeather] = useState({loaded:false});
   const [place, setPlace] = useState(props.defaultCity);
+  const[message, setMessage] = useState("")
 
   function displayWeather(response) {
     
@@ -35,6 +36,7 @@ export default function Form(props) {
   function handleTypedInput(event) {
    event.preventDefault();
     search()
+    setMessage(` ${place} `)
   }
   function updateTypedInput(event) {
     setPlace(event.target.value);
@@ -60,6 +62,7 @@ export default function Form(props) {
   if (weather.loaded) {
     return (
       <div>
+        <h1 className="text-capitalize">{message}</h1>
         {form}
         <WeatherData data={weather}/>
       </div>
