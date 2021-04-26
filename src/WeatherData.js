@@ -1,6 +1,7 @@
 import React from "react"
 import EngineeredDate from "./EngineereDate";
 import WeatherIcon from "./WeatherIcon"
+import WeatherTemperature from "./WeatherTemperature";
 
 
 export default function WeatherData(props){
@@ -14,17 +15,8 @@ export default function WeatherData(props){
                   <div className="icon"><WeatherIcon code={props.data.icon}/></div>
                 </div>
                 <div className="col-4">
-                    <h3>
-                <strong className="actuality">{props.data.temperature}</strong>
-                <span className="value">
-                  <a href="/" className="in-action">
-                    °C
-                  </a>
-                </span>
-                <span className="value2">
-                  /<a href="/">°F</a>
-                </span>
-              </h3>
+                  <WeatherTemperature celcius={props.data.temperature}/>
+                  
                 </div>
                 <div className="row"><div className="col-7">
                     <div className="text-capitalize">Description: {props.data.description}</div>

@@ -63,15 +63,15 @@ li {
 span.value {
   position: relative;
   font-size: 16px;
-  top: -15px;
+  top: -25px;
 }
 span.value2 {
   position: relative;
   font-size: 16px;
-  top: -15px;
+  top: -25px;
 }
 .actuality {
-  font-size: 40px;
+  font-size: 50px;
 }
 .in-action {
   color: black;
