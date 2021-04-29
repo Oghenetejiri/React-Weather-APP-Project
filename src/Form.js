@@ -4,6 +4,7 @@ import Loader from "react-loader-spinner";
 import './App.css';
 import Illustration from "./Illustration";
 import WeatherData from "./WeatherData";
+import WeatherForcast from "./WeatherForcast";
 
 
 export default function Form(props) {
@@ -65,6 +66,7 @@ export default function Form(props) {
         <h1 className="text-capitalize">{message}</h1>
         {form}
         <WeatherData data={weather}/>
+        <WeatherForcast/>
       </div>
     )} else {
   search();

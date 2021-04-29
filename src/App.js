@@ -11,7 +11,7 @@ import './App.css';
       <div className="container">
         <div className="wrapper">
           <div className="simple-weather-app">
-            <Form defaultCity=""/>
+            <Form defaultCity="Estonia"/>
             </div>
           </div>
           <Programmer />
