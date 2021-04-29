@@ -27,7 +27,7 @@ return<div><div className="Forcast-day">
                         {maxTemperature()}
                     </span>
                     <span className="Forcast-min-temperature">
-                        {minTemperature()}°
+                        {minTemperature()}
                     </span>
                 </div>
 </div>}
