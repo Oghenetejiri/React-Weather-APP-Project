@@ -16,6 +16,7 @@ export default function Form(props) {
     
     setWeather({
       loaded:true,
+      coordinates: response.data.coord,
       temperature: Math.round(response.data.main.temp),
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
@@ -66,7 +67,7 @@ export default function Form(props) {
         <h1 className="text-capitalize">{message}</h1>
         {form}
         <WeatherData data={weather}/>
-        <WeatherForcast/>
+        <WeatherForcast coordinates={weather.coordinates}/>
       </div>
     )} else {
   search();
