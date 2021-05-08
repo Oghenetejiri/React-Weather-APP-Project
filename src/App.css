@@ -46,7 +46,7 @@ button {
   background-image: url("./Backgrounds/default2-bg.jpg");
   background-size: 500px;
 }
-main {
+.container {
   max-height: 100vh;
   background-image: linear-gradient(
     to bottom,
